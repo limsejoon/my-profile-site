@@ -1,0 +1,179 @@
+/* ===== Custom Animations ===== */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Skill Bars ===== */
+.skill-bar {
+  width: 0;
+  transition: width 1.2s ease-out;
+}
+
+/* ===== Particles ===== */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== Navbar active link ===== */
+.nav-link.active {
+  color: #c4b5fd;
+}
+
+/* ===== Light Mode ===== */
+html.light body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+html.light nav {
+  background-color: rgba(248, 250, 252, 0.8);
+  border-color: rgba(226, 232, 240, 0.5);
+}
+
+html.light .bg-gray-900 {
+  background-color: #ffffff;
+}
+
+html.light .bg-gray-900\/50 {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+html.light .bg-gray-950 {
+  background-color: #f8fafc;
+}
+
+html.light .text-gray-100 {
+  color: #1e293b;
+}
+
+html.light .text-gray-300 {
+  color: #475569;
+}
+
+html.light .text-gray-400 {
+  color: #64748b;
+}
+
+html.light .text-gray-500 {
+  color: #94a3b8;
+}
+
+html.light .text-gray-600 {
+  color: #94a3b8;
+}
+
+html.light .text-white {
+  color: #0f172a;
+}
+
+html.light .border-gray-800 {
+  border-color: #e2e8f0;
+}
+
+html.light .border-gray-800\/50 {
+  border-color: rgba(226, 232, 240, 0.5);
+}
+
+html.light .border-gray-700 {
+  border-color: #cbd5e1;
+}
+
+html.light .bg-gray-800 {
+  background-color: #e2e8f0;
+}
+
+html.light .hover\:bg-gray-700:hover {
+  background-color: #cbd5e1;
+}
+
+html.light footer {
+  border-color: rgba(226, 232, 240, 0.5);
+}
+
+/* ===== Project Card Tags ===== */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+html.light .tag {
+  background-color: rgba(139, 92, 246, 0.08);
+  color: #7c3aed;
+  border-color: rgba(139, 92, 246, 0.15);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}

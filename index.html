@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>임세준 | AI 프로그래머</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+        SJ.
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link text-sm text-gray-400 hover:text-white transition-colors">소개</a>
+        <a href="#skills" class="nav-link text-sm text-gray-400 hover:text-white transition-colors">기술</a>
+        <a href="#projects" class="nav-link text-sm text-gray-400 hover:text-white transition-colors">프로젝트</a>
+        <a href="#contact" class="nav-link text-sm text-gray-400 hover:text-white transition-colors">연락처</a>
+        <button id="darkToggle" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors" aria-label="테마 전환">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 space-y-3">
+      <a href="#about" class="block text-sm text-gray-400 hover:text-white transition-colors">소개</a>
+      <a href="#skills" class="block text-sm text-gray-400 hover:text-white transition-colors">기술</a>
+      <a href="#projects" class="block text-sm text-gray-400 hover:text-white transition-colors">프로젝트</a>
+      <a href="#contact" class="block text-sm text-gray-400 hover:text-white transition-colors">연락처</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+    <div class="text-center px-6 relative z-10">
+      <div class="mb-6 inline-block">
+        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-violet-500 to-cyan-500 p-1 mx-auto">
+          <div class="w-full h-full rounded-full bg-gray-950 flex items-center justify-center text-4xl">
+            👨‍💻
+          </div>
+        </div>
+      </div>
+      <p class="text-violet-400 font-medium mb-3 tracking-wide animate-fade-in">안녕하세요, 저는</p>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-up">
+        <span class="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          임세준
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-2 animate-fade-in-up delay-100">AI 프로그래머</p>
+      <p class="text-lg text-gray-500 mb-10 animate-fade-in-up delay-200">
+        " 진지하지 않은 프로그래머 "
+      </p>
+      <div class="flex gap-4 justify-center animate-fade-in-up delay-300">
+        <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-full font-semibold hover:shadow-lg hover:shadow-violet-500/25 transition-all hover:-translate-y-0.5">
+          프로젝트 보기
+        </a>
+        <a href="#contact" class="px-8 py-3 border border-gray-700 rounded-full font-semibold hover:border-violet-500 hover:text-violet-400 transition-all hover:-translate-y-0.5">
+          연락하기
+        </a>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">About Me</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-gray-300 leading-relaxed text-lg">
+            안녕하세요! <strong class="text-white">임세준</strong>입니다.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            AI와 프로그래밍의 교차점에서 재미있는 것들을 만들고 있습니다.
+            진지하지 않지만, 코드는 진지하게 씁니다. (가끔은요.)
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            새로운 기술을 배우고 실험하는 것을 좋아하며,
+            깔끔한 코드와 직관적인 UI를 추구합니다.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center hover:border-violet-500/50 transition-colors">
+            <p class="text-3xl font-bold text-violet-400">AI</p>
+            <p class="text-sm text-gray-500 mt-1">주 분야</p>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center hover:border-cyan-500/50 transition-colors">
+            <p class="text-3xl font-bold text-cyan-400">Web</p>
+            <p class="text-sm text-gray-500 mt-1">프론트엔드</p>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-colors">
+            <p class="text-3xl font-bold text-purple-400">∞</p>
+            <p class="text-sm text-gray-500 mt-1">호기심</p>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center hover:border-pink-500/50 transition-colors">
+            <p class="text-3xl font-bold text-pink-400">:)</p>
+            <p class="text-sm text-gray-500 mt-1">유머</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6 bg-gray-900/50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Skills</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- HTML -->
+        <div class="group bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-orange-500/50 transition-all hover:-translate-y-1">
+          <div class="text-4xl mb-4">🏗️</div>
+          <h3 class="text-xl font-bold mb-2">HTML</h3>
+          <p class="text-gray-400 text-sm mb-4">시맨틱 마크업과 접근성을 고려한 구조 설계</p>
+          <div class="w-full bg-gray-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-orange-500 to-orange-400 h-2 rounded-full skill-bar" data-width="90"></div>
+          </div>
+        </div>
+        <!-- CSS -->
+        <div class="group bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-all hover:-translate-y-1">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-bold mb-2">CSS</h3>
+          <p class="text-gray-400 text-sm mb-4">반응형 디자인과 모던한 레이아웃 구현</p>
+          <div class="w-full bg-gray-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full skill-bar" data-width="85"></div>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="group bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-yellow-500/50 transition-all hover:-translate-y-1">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+          <p class="text-gray-400 text-sm mb-4">인터랙티브한 UI와 동적 기능 개발</p>
+          <div class="w-full bg-gray-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 h-2 rounded-full skill-bar" data-width="80"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">
+        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+      </h2>
+      <p class="text-gray-500 text-center mb-12">만들어 온 것들</p>
+      <div id="projectGrid" class="grid md:grid-cols-2 gap-6">
+        <!-- Projects will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 bg-gray-900/50">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Contact</span>
+      </h2>
+      <p class="text-gray-400 mb-12">두둥! 연락은 언제든 환영합니다.</p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="mailto:thevostok13@gmail.com" class="group bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-violet-500/50 transition-all hover:-translate-y-1 block">
+          <div class="text-3xl mb-3">📧</div>
+          <h3 class="font-semibold mb-1">Email</h3>
+          <p class="text-sm text-gray-400 group-hover:text-violet-400 transition-colors">thevostok13@gmail.com</p>
+        </a>
+        <a href="https://github.com/limsejoon" target="_blank" rel="noopener" class="group bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-500/50 transition-all hover:-translate-y-1 block">
+          <div class="text-3xl mb-3">🐙</div>
+          <h3 class="font-semibold mb-1">GitHub</h3>
+          <p class="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors">github.com/limsejoon</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-gray-800/50">
+    <div class="max-w-6xl mx-auto text-center text-sm text-gray-600">
+      <p>&copy; 2026 임세준. Built with ☕ and a sense of humor.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
